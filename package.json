@@ -17,7 +17,8 @@
     "test": "test-storybook -ui",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "vtest": "vitest"
+    "vtest": "vitest",
+    "chromatic": "npx chromatic --project-token=chpt_7d8c638a9ed7149"
   },
   "peerDependencies": {
     "antd": ">=5.0.0",
