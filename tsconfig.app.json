@@ -12,8 +12,12 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
     "jsx": "react-jsx",
+
+    "rootDir": "./",
+    "declaration": true,
+    "outDir": "./dist", // 指定输出目录
+    "emitDeclarationOnly": true, // 只生成 `.d.ts` 文件，不生成 `.js` 文件
 
     /* Linting */
     "strict": true,
@@ -22,5 +26,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["components/**/*", "main.tsx", "vite-env.d.ts"],
+  "exclude": ["**/*.test.ts", "**/*.stories.tsx"]
 }

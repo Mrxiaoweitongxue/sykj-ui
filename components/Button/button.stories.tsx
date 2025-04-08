@@ -2,11 +2,12 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Button, ButtonPropsEx } from './button'
 import { userEvent, within, expect } from '@storybook/test';
 import { action } from '@storybook/addon-actions'
+import React from 'react';
 export default {
   title: 'Button',
   component: Button,
 } as Meta<ButtonPropsEx>
-export const AutoLoadingButton: StoryObj<typeof Button> = {
+export const 自动按钮: StoryObj<typeof Button> = {
   args: {
     size: 'large',
     children: 'AutoLoadingButton',
@@ -29,3 +30,8 @@ export const AutoLoadingButton: StoryObj<typeof Button> = {
     }, 3000);
   },
 }
+
+export const PrimaryStory = () => <>
+  <Button>默认按钮</Button>
+  <Button type='primary'>primary按钮</Button>
+</>
