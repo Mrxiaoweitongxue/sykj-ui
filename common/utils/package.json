@@ -1,10 +1,10 @@
 {
   "name": "@sykj-ui/utils",
-  "version": "2.16.1",
+  "version": "0.0.1",
   "type": "module",
   "license": "MIT",
   "private": false,
-  "author": "qmhc",
+  "author": "weiz",
   "scripts": {
     "build": "vite build && tsc -b",
     "test": "vitest run",

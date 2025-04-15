@@ -85,7 +85,8 @@
     "chromatic": "npx chromatic --project-token=chpt_7d8c638a9ed7149",
     "storybook": "storybook dev -p 6006",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
-    "release": "tsx scripts/release.ts"
+    "release": "tsx scripts/release.ts",
+    "publish:ci": "tsx scripts/publish.ts"
   },
   "peerDependencies": {
     "antd": ">=5.0.0",

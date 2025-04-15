@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
 
 import minimist from 'minimist'
-import { logger, publish } from '@vexip-ui/scripts'
+import { logger, publish } from '@sykj-ui/scripts'
 import { rootDir } from './constant'
 import { getPackageName } from './utils'
 
@@ -20,7 +20,7 @@ async function main() {
   let inputPkg = ''
 
   if (target?.startsWith('v')) {
-    inputPkg = 'vexip-ui'
+    inputPkg = 'sykj-ui'
   } else if (target?.includes('@')) {
     ;[inputPkg] = target.split('@')
 
@@ -30,7 +30,7 @@ async function main() {
   }
 
   const pkgName = await getPackageName(inputPkg)
-  const pkgDir = pkgName === 'vexip-ui' ? rootDir : resolve(rootDir, pkgName)
+  const pkgDir = pkgName === 'sykj-ui' ? rootDir : resolve(rootDir, pkgName)
 
   await publish({ pkgDir, isDryRun, releaseTag })
 }
