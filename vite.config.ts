@@ -27,13 +27,13 @@ export default defineConfig(async (): Promise<UserConfig> => {
     absolute: true,
     onlyFiles: true
   })
-  input.push(resolve(__dirname, 'main.tsx'))
+  input.push(resolve(__dirname, 'index.tsx'))
   input = input.filter(ele => /^(?!.*(stories\.tsx?|test\.ts)$).+\.tsx?$/.test(ele))
   return {
     plugins: [react()],
     build: {
       lib: {
-        entry: resolve(__dirname, 'main.tsx'),
+        entry: resolve(__dirname, 'index.tsx'),
         name: 'sykj-ui',
       },
       rollupOptions: {

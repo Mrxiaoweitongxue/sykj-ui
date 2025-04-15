@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@sykj-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:common/utils
       antd:
         specifier: ^5.24.5
@@ -64,7 +64,7 @@ importers:
         specifier: ^8.6.12
         version: 8.6.12(storybook@8.6.12)
       '@sykj-ui/scripts':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:common/scripts
       '@types/node':
         specifier: ^22.14.1

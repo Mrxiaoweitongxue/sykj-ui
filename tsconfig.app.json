@@ -26,6 +26,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["components/**/*", "main.tsx", "vite-env.d.ts"],
+  "include": ["components/**/*", "index.tsx", "vite-env.d.ts"],
   "exclude": ["**/*.test.ts", "**/*.stories.tsx"]
 }
