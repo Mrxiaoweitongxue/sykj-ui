@@ -11,15 +11,6 @@ importers:
       '@sykj-ui/utils':
         specifier: workspace:^
         version: link:common/utils
-      antd:
-        specifier: ^5.24.5
-        version: 5.24.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
     devDependencies:
       '@chromatic-com/storybook':
         specifier: '3'
@@ -84,6 +75,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: 3.0.9
         version: 3.0.9(@vitest/browser@3.0.9(@types/node@22.14.1)(playwright@1.51.1)(typescript@5.7.3)(vite@6.2.3(@types/node@22.14.1)(jiti@2.4.2)(sass-embedded@1.86.0)(tsx@4.19.3))(vitest@3.0.9))(vitest@3.0.9(@types/node@22.14.1)(@vitest/browser@3.0.9)(jiti@2.4.2)(msw@2.7.3(@types/node@22.14.1)(typescript@5.7.3))(sass-embedded@1.86.0)(tsx@4.19.3))
+      antd:
+        specifier: ^5.24.5
+        version: 5.24.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       chromatic:
         specifier: ^11.27.0
         version: 11.27.0
@@ -126,6 +120,12 @@ importers:
       prompts:
         specifier: ^2.4.2
         version: 2.4.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
       sass-embedded:
         specifier: ^1.86.0
         version: 1.86.0
