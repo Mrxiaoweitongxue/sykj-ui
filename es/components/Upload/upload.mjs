@@ -1,6 +1,7 @@
-import { jsx as r } from "react/jsx-runtime";
+import { jsx as o } from "react/jsx-runtime";
+import { Upload as r } from "antd";
 /* empty css             */
-const a = () => /* @__PURE__ */ r("div", { className: "sykj-container", children: /* @__PURE__ */ r("div", { className: "sykj-upload", children: "上传" }) });
+const p = () => /* @__PURE__ */ o("div", { className: "sykj-container", children: /* @__PURE__ */ o(r, { className: "sykj-upload", children: "上传" }) });
 export {
-  a as Upload
+  p as Upload
 };

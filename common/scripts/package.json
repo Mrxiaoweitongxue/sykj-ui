@@ -1,0 +1,54 @@
+{
+  "name": "@sykj-ui/scripts",
+  "version": "1.1.4",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "author": "qmhc",
+  "scripts": {
+    "build": "tsx scripts/build.ts"
+  },
+  "bin": {
+    "sykj": "bin/sykj.js",
+    "sykj-cli": "bin/sykj.js"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vexip-ui/vexip-ui.git",
+    "directory": "common/scripts"
+  },
+  "homepage": "https://github.com/vexip-ui/vexip-ui/tree/main/common/scripts#readme",
+  "dependencies": {
+    "@sykj-ui/utils": "workspace:*",
+    "compare-versions": "^6.1.0",
+    "execa": "^8.0.1",
+    "kolorist": "^1.8.0",
+    "local-pkg": "^0.5.0",
+    "prompts": "^2.4.2",
+    "semver": "^7.6.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@pnpm/types": "^9.4.2",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.12.5",
+    "@types/prompts": "^2.4.9",
+    "@types/semver": "^7.5.8",
+    "@types/yargs": "^17.0.32",
+    "tsup": "^8.0.2"
+  }
+}

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-
+import { Upload as AntdUpload } from 'antd';
 import "./upload.scss"
 export interface UploadProps {
   onClick?: (args?: unknown) => Promise<unknown>
@@ -7,7 +7,7 @@ export interface UploadProps {
 export const Upload: FC<UploadProps> = () => {
   return (
     <div className='sykj-container'>
-      <div className='sykj-upload'>上传</div>
+      <AntdUpload className='sykj-upload'>上传</AntdUpload>
     </div>
   );
 };

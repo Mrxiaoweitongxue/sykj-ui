@@ -1,7 +1,7 @@
 {
   "name": "sykj-ui",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
   "main": "lib/index.cjs",
   "module": "es/index.mjs",
@@ -84,7 +84,8 @@
     "analyze": "vite-bundle-visualizer",
     "chromatic": "npx chromatic --project-token=chpt_7d8c638a9ed7149",
     "storybook": "storybook dev -p 6006",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path ."
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
+    "release": "tsx scripts/release.ts"
   },
   "peerDependencies": {
     "antd": ">=5.0.0",
@@ -92,6 +93,7 @@
     "react-dom": ">=16.9.0"
   },
   "dependencies": {
+    "@sykj-ui/utils": "workspace:*",
     "antd": "^5.24.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -111,6 +113,7 @@
     "@storybook/test": "8.6.11",
     "@storybook/test-runner": "^0.22.0",
     "@storybook/theming": "^8.6.12",
+    "@sykj-ui/scripts": "workspace:*",
     "@types/node": "^22.14.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -128,9 +131,12 @@
     "fast-glob": "^3.3.3",
     "globals": "^15.15.0",
     "magic-string": "^0.30.17",
+    "minimist": "^1.2.8",
     "playwright": "^1.51.1",
+    "prompts": "^2.4.2",
     "sass-embedded": "^1.86.0",
-    "storybook": "^8.6.11",
+    "storybook": "^8.6.12",
+    "tsx": "^4.19.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
