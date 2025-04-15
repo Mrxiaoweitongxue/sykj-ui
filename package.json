@@ -1,7 +1,7 @@
 {
   "name": "sykj-ui",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "lib/index.cjs",
   "module": "es/index.mjs",
@@ -86,7 +86,10 @@
     "storybook": "storybook dev -p 6006",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
     "release": "tsx scripts/release.ts",
-    "publish:ci": "tsx scripts/publish.ts"
+    "publish:ci": "tsx scripts/publish.ts",
+    "build:scripts": "pnpm -C common/scripts build && pnpm i",
+    "build:utils": "pnpm -C common/utils build && pnpm i",
+    "build:all": "pnpm run build:scripts && pnpm run build:utils && pnpm run build"
   },
   "peerDependencies": {
     "antd": ">=5.0.0",
