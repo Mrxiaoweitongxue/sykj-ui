@@ -1,8 +1,9 @@
-import { jsx as o } from "react/jsx-runtime";
-import { StrictMode as r } from "react";
-import { createRoot as t } from "react-dom/client";
-/* empty css            */
-import m from "./components/App.mjs";
-t(document.getElementById("root")).render(
-  /* @__PURE__ */ o(r, { children: /* @__PURE__ */ o(m, {}) })
-);
+/* empty css                  */
+import "./components/Button/index.mjs";
+import "./components/Upload/index.mjs";
+import { Button as i } from "./components/Button/button.mjs";
+import { Upload as f } from "./components/Upload/upload.mjs";
+export {
+  i as Button,
+  f as Upload
+};

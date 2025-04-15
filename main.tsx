@@ -1,10 +1,5 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.scss'
-import App from './components/App.tsx'
+import './style/index.scss'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+export { default as Button } from './components/button'
+
+export { default as Upload } from './components/upload'

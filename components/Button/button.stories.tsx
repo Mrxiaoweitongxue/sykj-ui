@@ -7,7 +7,7 @@ export default {
   title: 'Button',
   component: Button,
 } as Meta<ButtonPropsEx>
-export const 自动按钮: StoryObj<typeof Button> = {
+export const 包装按钮: StoryObj<typeof Button> = {
   args: {
     size: 'large',
     children: 'AutoLoadingButton',
@@ -25,13 +25,21 @@ export const 自动按钮: StoryObj<typeof Button> = {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByRole('button'));
     await expect(canvas.getByRole('button')).toHaveClass('ant-btn-loading')
-    setTimeout(async () => {
-      await expect(canvas.getByRole('button')).not.toHaveClass('ant-btn-loading')
-    }, 3000);
+    await new Promise((resolve) => {
+      setTimeout(async () => {
+        resolve(true)
+      }, 2200);
+    })
+    await expect(canvas.getByRole('button')).not.toHaveClass('ant-btn-loading')
   },
 }
+/**
+ * 
+ * <a href="https://ant.design/components/button-cn" target="_blank">访问：ant-button</a>
+ * 
+ */
 
-export const PrimaryStory = () => <>
+export const ant按钮 = () => <>
   <Button>默认按钮</Button>
   <Button type='primary'>primary按钮</Button>
 </>

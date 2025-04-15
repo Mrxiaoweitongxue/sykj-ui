@@ -1,9 +1,11 @@
+
 import { resolve } from 'node:path'
 import { readFileSync } from 'node:fs'
 
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import glob from 'fast-glob'
+import react from '@vitejs/plugin-react'
+
 import type { UserConfig } from 'vite'
 
 interface Manifest {
@@ -28,7 +30,7 @@ export default defineConfig(async (): Promise<UserConfig> => {
   input.push(resolve(__dirname, 'main.tsx'))
   input = input.filter(ele => /^(?!.*(stories\.tsx?|test\.ts)$).+\.tsx?$/.test(ele))
   return {
-    plugins: [react(),],
+    plugins: [react()],
     build: {
       lib: {
         entry: resolve(__dirname, 'main.tsx'),
@@ -37,6 +39,7 @@ export default defineConfig(async (): Promise<UserConfig> => {
       rollupOptions: {
         input,
         external,
+        treeshake: false,
         output: [
           {
             format: 'cjs',
@@ -53,7 +56,6 @@ export default defineConfig(async (): Promise<UserConfig> => {
             entryFileNames: '[name].mjs'
           }
         ],
-        treeshake: false
       }
     },
   }

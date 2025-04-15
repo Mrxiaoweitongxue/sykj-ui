@@ -8,15 +8,20 @@ const config: StorybookConfig = {
   "addons": [
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
-    // "@chromatic-com/storybook",//视觉测试
-    "@storybook/experimental-addon-test"
+    // "@chromatic-com/storybook",
+    "@storybook/addon-interactions"
   ],
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
   },
-  docs: {
-    defaultName: 'Documentation'
-  },
+  // async viteFinal(config) {
+  //   const { mergeConfig } = await import('vite');
+  //   return mergeConfig(config, {
+  //     optimizeDeps: {
+  //       include: ['storybook-dark-mode'],
+  //     },
+  //   });
+  // },
 };
 export default config;

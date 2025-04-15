@@ -10,8 +10,6 @@ export interface ButtonPropsEx extends ButtonProps {
  * 
  * ```javascript
  * import { Button } from 'sykj-ui'
- * 
- * //然后可以使用 Menu.Item 和 Menu.Submenu 访问选项和子下拉菜单组件
  * ```
  */
 export const Button: FC<ButtonPropsEx> = ({
