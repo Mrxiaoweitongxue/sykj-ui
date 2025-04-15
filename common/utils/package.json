@@ -23,11 +23,5 @@
   },
   "files": [
     "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vexip-ui/vexip-ui.git",
-    "directory": "common/utils"
-  },
-  "homepage": "https://github.com/vexip-ui/vexip-ui/tree/main/common/utils#readme"
+  ]
 }

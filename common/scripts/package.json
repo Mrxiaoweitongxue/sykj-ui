@@ -1,6 +1,6 @@
 {
   "name": "@sykj-ui/scripts",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "license": "MIT",
   "private": false,
@@ -26,12 +26,6 @@
     "bin",
     "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vexip-ui/vexip-ui.git",
-    "directory": "common/scripts"
-  },
-  "homepage": "https://github.com/vexip-ui/vexip-ui/tree/main/common/scripts#readme",
   "dependencies": {
     "@sykj-ui/utils": "workspace:*",
     "compare-versions": "^6.1.0",
