@@ -1,3 +1,12 @@
+## [0.0.8](https://gitee.com/sykj-ui/home/compare/v0.0.7...v0.0.8) (2025-04-17)
+
+
+### Features
+
+* 更新打包命令 ([821277c](https://gitee.com/sykj-ui/home/commits/821277c802ca119295bf51ebdaf19093a11f6f6c))
+
+
+
 ## [0.0.7](https://gitee.com/sykj-ui/home/compare/v0.0.6...v0.0.7) (2025-04-15)
 
 
