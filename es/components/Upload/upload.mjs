@@ -1,8 +1,7 @@
-import { jsx as o } from "react/jsx-runtime";
-import { Upload as r } from "antd";
-import { Button as t } from "../button/button.mjs";
+import { jsx as a } from "react/jsx-runtime";
+import { Upload as o } from "antd";
 /* empty css             */
-const l = () => /* @__PURE__ */ o(r, { children: /* @__PURE__ */ o(t, { children: "上传" }) });
+const l = () => /* @__PURE__ */ a(o, { className: "sykj-container", children: /* @__PURE__ */ a("div", { className: "sykj-upload", children: "asdasd" }) });
 export {
   l as Upload
 };

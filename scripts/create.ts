@@ -11,7 +11,7 @@ import { components as allComponents, rootDir, prettierConfig } from './constant
 
 const args = minimist(process.argv.slice(2))
 
-let name = args._[0]
+let name: string = args._[0]
 
 const eslint = new ESLint({ fix: true })
 async function getConvertCompTypeFiles(capitalCaseName: string, kebabCaseName: string): Promise<
