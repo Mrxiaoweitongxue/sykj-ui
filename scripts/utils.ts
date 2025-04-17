@@ -92,3 +92,4 @@ export async function getPackageInfo(inputPkg: string) {
     currentVersion: info.pkg.version || '0.0.0'
   }
 }
+

@@ -1,7 +1,8 @@
 import { jsx as o } from "react/jsx-runtime";
 import { Upload as r } from "antd";
+import { Button as t } from "../button/button.mjs";
 /* empty css             */
-const p = () => /* @__PURE__ */ o("div", { className: "sykj-container", children: /* @__PURE__ */ o(r, { className: "sykj-upload", children: "上传" }) });
+const l = () => /* @__PURE__ */ o(r, { children: /* @__PURE__ */ o(t, { children: "上传" }) });
 export {
-  p as Upload
+  l as Upload
 };

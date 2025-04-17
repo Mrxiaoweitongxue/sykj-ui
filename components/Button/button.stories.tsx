@@ -35,11 +35,11 @@ export const 包装按钮: StoryObj<typeof Button> = {
 }
 /**
  * 
- * <a href="https://ant.design/components/button-cn" target="_blank">访问：ant-button</a>
+ * <a href="https://ant.design/components/button-cn" target="_blank">ant-button</a>
  * 
  */
 
-export const ant按钮 = () => <>
+export const antd按钮 = () => <>
   <Button>默认按钮</Button>
   <Button type='primary'>primary按钮</Button>
 </>

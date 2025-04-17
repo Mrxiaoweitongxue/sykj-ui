@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import glob from 'fast-glob'
 import react from '@vitejs/plugin-react'
+// import babel from "vite-plugin-babel";
 
 import type { UserConfig } from 'vite'
 
@@ -32,6 +33,7 @@ export default defineConfig(async (): Promise<UserConfig> => {
   return {
     plugins: [react()],
     build: {
+      target: 'es2015',
       lib: {
         entry: resolve(__dirname, 'index.tsx'),
         name: 'sykj-ui',
