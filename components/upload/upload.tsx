@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Upload as AntdUpload } from 'antd';
-import "./upload.scss"
+import "./index.scss"
 export interface UploadProps {
   onClick?: (args?: unknown) => Promise<unknown>
 }

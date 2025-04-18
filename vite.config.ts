@@ -5,7 +5,6 @@ import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import glob from 'fast-glob'
 import react from '@vitejs/plugin-react'
-// import babel from "vite-plugin-babel";
 
 import type { UserConfig } from 'vite'
 
@@ -32,8 +31,14 @@ export default defineConfig(async (): Promise<UserConfig> => {
   input = input.filter(ele => /^(?!.*(stories\.tsx?|test\.ts)$).+\.tsx?$/.test(ele))
   return {
     plugins: [react()],
+    resolve: {
+      alias: [
+        { find: /^@\/(.+)/, replacement: resolve(__dirname, '$1') },
+      ]
+    },
     build: {
-      target: 'es2015',
+      minify: true,
+      cssCodeSplit: true,
       lib: {
         entry: resolve(__dirname, 'index.tsx'),
         name: 'sykj-ui',
@@ -41,7 +46,7 @@ export default defineConfig(async (): Promise<UserConfig> => {
       rollupOptions: {
         input,
         external,
-        treeshake: false,
+        treeshake: true,
         output: [
           {
             format: 'cjs',

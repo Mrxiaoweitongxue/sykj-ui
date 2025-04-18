@@ -1,7 +1,6 @@
 import { FC, useState } from 'react';
-
-import { Button as AntButton, ButtonProps } from 'antd';
-
+import { Button as AntdButton, ButtonProps } from 'antd';
+import './index.scss'
 export interface ButtonPropsEx extends ButtonProps {
   onClick?: (args?: unknown) => Promise<unknown>
 }
@@ -17,7 +16,7 @@ export const Button: FC<ButtonPropsEx> = ({
 }) => {
   const [loading, setLoading] = useState(false)
   return (
-    <AntButton
+    <AntdButton
       loading={loading}
       disabled={loading}
       {...props}
@@ -34,6 +33,6 @@ export const Button: FC<ButtonPropsEx> = ({
       }}
     >
       {props.children}
-    </AntButton>
+    </AntdButton>
   );
 };
