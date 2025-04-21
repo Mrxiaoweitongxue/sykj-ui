@@ -1,1 +1,0 @@
-import{a as o}from"./index-B-lxVbXh.js";import"./v4-CtRu48qb.js";const r={parameters:{layout:"centered",controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}}},args:{onClick:o("clicked")},tags:["autodocs"]};export{r as default};
