@@ -22,10 +22,20 @@ async function getConvertCompTypeFiles(capitalCaseName: string, kebabCaseName: s
 
   const compConfigSource = (await fs.readFile(compConfigPath, 'utf-8')).split('\n')
   compConfigSource.push(`export { default as ${capitalCaseName} } from './components/${kebabCaseName}'`)
+
+  const compConfigCssPath = path.resolve(rootDir, 'index.scss')
+
+  const compConfigCssSource = (await fs.readFile(compConfigPath, 'utf-8')).split('\n')
+  compConfigSource.push(`@import url("../components/${capitalCaseName}/index.module.scss")`)
   return [
     {
       filePath: compConfigPath,
       source: compConfigSource.join('\n'),
+      convert: true
+    },
+    {
+      filePath: compConfigCssPath,
+      source: compConfigCssSource.join('\n'),
       convert: true
     }
   ]
@@ -93,7 +103,7 @@ async function create(name: string) {
         source: `
           import { FC } from 'react';
           import { ${capitalCaseName} as Antd${capitalCaseName} } from 'antd';
-          import "./${kebabCaseName}.scss"
+          import styles from "./index.module.scss"
           export interface ${capitalCaseName}Props {
             name?: string
           }
@@ -133,7 +143,7 @@ async function create(name: string) {
         `
       },
       {
-        filePath: path.resolve(rootDir, 'components', kebabCaseName, `${kebabCaseName}.scss`),
+        filePath: path.resolve(rootDir, 'components', kebabCaseName, `index.module.scss`),
         source: `
           .test{
             color:red;

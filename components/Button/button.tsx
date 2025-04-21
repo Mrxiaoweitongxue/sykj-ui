@@ -1,6 +1,6 @@
-import { FC, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { Button as AntdButton, ButtonProps } from 'antd';
-import './index.scss'
+import styles from './index.module.scss'
 export interface ButtonPropsEx extends ButtonProps {
   onClick?: (args?: unknown) => Promise<unknown>
 }
@@ -17,6 +17,7 @@ export const Button: FC<ButtonPropsEx> = ({
   const [loading, setLoading] = useState(false)
   return (
     <AntdButton
+      className={styles.button}
       loading={loading}
       disabled={loading}
       {...props}

@@ -1,14 +1,15 @@
 import { jsx as a } from "react/jsx-runtime";
 import { useState as l } from "react";
 import { Button as c } from "antd";
-/* empty css            */
-const s = ({
+import f from "./index.module.scss.js";
+const d = ({
   ...t
 }) => {
   const [n, i] = l(!1);
   return /* @__PURE__ */ a(
     c,
     {
+      className: f.button,
       loading: n,
       disabled: n,
       ...t,
@@ -26,5 +27,5 @@ const s = ({
   );
 };
 export {
-  s as Button
+  d as Button
 };

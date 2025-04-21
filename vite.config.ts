@@ -36,6 +36,9 @@ export default defineConfig(async (): Promise<UserConfig> => {
         { find: /^@\/(.+)/, replacement: resolve(__dirname, '$1') },
       ]
     },
+    esbuild: {
+      loader: 'tsx'
+    },
     build: {
       minify: true,
       cssCodeSplit: true,
@@ -60,7 +63,7 @@ export default defineConfig(async (): Promise<UserConfig> => {
             preserveModules: true,
             preserveModulesRoot: __dirname,
             dir: 'es',
-            entryFileNames: '[name].mjs'
+            entryFileNames: '[name].js'
           }
         ],
       }
