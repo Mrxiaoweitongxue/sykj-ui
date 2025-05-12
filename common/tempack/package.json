@@ -1,0 +1,28 @@
+{
+  "name": "@sykj-ui/files",
+  "version": "0.0.1",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "author": "weiz",
+  "scripts": {
+    "build": "vite build && tsc -b",
+    "test": "vitest run",
+    "test:cover": "vitest run --coverage",
+    "test:dev": "vitest dev"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "react-ts-lib-starter-master.zip"
+  ]
+}
