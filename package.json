@@ -73,7 +73,8 @@
     "themes",
     "CHANGELOG.md",
     "meta-data.json",
-    "types.d.ts"
+    "types.d.ts",
+    "sykj-ui-pro.zip"
   ],
   "scripts": {
     "dev": "vite",
