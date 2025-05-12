@@ -1,5 +1,5 @@
 {
-  "name": "@sykj-ui/weizfiles",
+  "name": "@sykj-ui/files",
   "version": "0.0.1",
   "type": "module",
   "license": "MIT",
@@ -8,5 +8,8 @@
   "files": [
     "dist",
     "react-ts-lib-starter-master.zip"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
